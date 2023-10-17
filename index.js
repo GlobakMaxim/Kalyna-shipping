@@ -7,6 +7,7 @@ const weightInput = document.getElementById("calc-input-weight");
 const resultTag = document.getElementById("result");
 const alert = document.getElementById("alert");
 const danger = document.getElementById("danger");
+const resetButton = document.getElementById("reset");
 
 let sortedCountries = countries.sort((a, b) => {
   if (a.priority < b.priority) {
@@ -31,6 +32,8 @@ let calcInputs = document.getElementsByClassName("calc");
 Array.from(calcInputs).forEach(input => { 
     input.onchange = calculate
 });
+
+resetButton.onclick = clear;
 
 /// FUNCTIONS
 
