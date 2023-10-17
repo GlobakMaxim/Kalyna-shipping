@@ -2,8 +2,9 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+		<!-- Logic code is imported after the body HTML tag -->
 	</head>
 	<body>
 		<div class="container">
@@ -77,169 +78,13 @@
 				</div>
 			</div>
 			<div class="col">
-				<div class="row m-2">
-					<button type="reset" class="btn btn-outline-danger" id="clear">Очистить</button>
+				<div class="row mt-5 text-center">
+					<p class="text-body-tertiary fw-light">Чтоб очистить все поля потяните вниз<br>↓</p>
 				</div>
 			</div>
 		</div>
 	</body>
-	<script type="text/javascript">
-		let countries = [{"air":{"aveDeliveryTime":"7-14 days","fee":25,"maxWeight":30,"minWeight":3,"price":7.60,"sideLimit":130},"name":"Austria","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":25,"maxWeight":30,"minWeight":6,"price":3.20,"sideLimit":150}},{"air":{"aveDeliveryTime":"7-14 days","fee":25,"maxWeight":30,"minWeight":3,"price":7.60,"sideLimit":130},"name":"Belgium","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":25,"maxWeight":30,"minWeight":6,"price":3.20,"sideLimit":150}},{"air":{"aveDeliveryTime":"10-21 days","fee":30,"maxWeight":99,"minWeight":3,"price":6.70,"sideLimit":130},"name":"Bulgaria","overwaight":true,"packageDimension":540,"priority":0,"sea":{"aveDeliveryTime":"4-8 weeks","fee":20,"maxWeight":99,"minWeight":6,"price":3.20,"sideLimit":150}},{"air":{"aveDeliveryTime":"7-15 days","fee":40,"maxWeight":30,"minWeight":3,"price":7.60,"sideLimit":130},"name":"Croatia (Hrvatska)","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":40,"maxWeight":30,"minWeight":6,"price":3.20,"sideLimit":150}},{"air":{"aveDeliveryTime":"7-15 days","fee":15,"maxWeight":30,"minWeight":3,"price":7.60,"sideLimit":130},"name":"Czech Republic","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":15,"maxWeight":30,"minWeight":6,"price":2.80,"sideLimit":150}},{"air":{"aveDeliveryTime":"7-15 days","fee":30,"maxWeight":30,"minWeight":3,"price":7.60,"sideLimit":130},"name":"Denmark","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":30,"maxWeight":30,"minWeight":6,"price":3.20,"sideLimit":150}},{"air":{"aveDeliveryTime":"7-15 days","fee":30,"maxWeight":30,"minWeight":3,"price":7.60,"sideLimit":130},"name":"Estonia","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":30,"maxWeight":30,"minWeight":6,"price":3.35,"sideLimit":150}},{"air":{"aveDeliveryTime":"7-15 days","fee":40,"maxWeight":30,"minWeight":3,"price":7.90,"sideLimit":130},"name":"Finland","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":40,"maxWeight":30,"minWeight":6,"price":3.65,"sideLimit":150}},{"air":{"aveDeliveryTime":"7-15 days","fee":25,"maxWeight":30,"minWeight":3,"price":7.85,"sideLimit":130},"name":"France","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":25,"maxWeight":30,"minWeight":6,"price":3.10,"sideLimit":150}},{"air":{"aveDeliveryTime":"7-15 days","fee":15,"maxWeight":30,"minWeight":3,"price":7.60,"sideLimit":130},"name":"Germany","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":15,"maxWeight":30,"minWeight":6,"price":3.30,"sideLimit":150}},{"air":{"aveDeliveryTime":"7-15 days","fee":45,"maxWeight":30,"minWeight":3,"price":8.10,"sideLimit":130},"name":"Greece","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":55,"maxWeight":30,"minWeight":6,"price":3.35,"sideLimit":150}},{"air":{"aveDeliveryTime":"7-15 days","fee":25,"maxWeight":30,"minWeight":3,"price":6.35,"sideLimit":130},"name":"Hungary","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":20,"maxWeight":30,"minWeight":6,"price":3.35,"sideLimit":150}},{"air":{"aveDeliveryTime":"8-15 days","fee":30,"maxWeight":30,"minWeight":3,"price":7.35,"sideLimit":130},"name":"Ireland","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":35,"maxWeight":30,"minWeight":6,"price":3.35,"sideLimit":150}},{"air":{"aveDeliveryTime":"7-15 days","fee":30,"maxWeight":30,"minWeight":3,"price":7.60,"sideLimit":130},"name":"Italy","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":30,"maxWeight":30,"minWeight":6,"price":3.20,"sideLimit":150}},{"air":{"aveDeliveryTime":"7-15 days","fee":20,"maxWeight":30,"minWeight":3,"price":7.60,"sideLimit":130},"name":"Latvia","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":20,"maxWeight":30,"minWeight":6,"price":3.35,"sideLimit":150}},{"air":{"aveDeliveryTime":"6-12 days","fee":25,"maxWeight":99,"minWeight":3,"price":7.35,"sideLimit":130},"name":"Lithuania","overwaight":true,"packageDimension":540,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":25,"maxWeight":99,"minWeight":6,"price":3.35,"sideLimit":150}},{"air":{"aveDeliveryTime":"7-15 days","fee":20,"maxWeight":30,"minWeight":3,"price":7.90,"sideLimit":130},"name":"Luxembourg","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":25,"maxWeight":30,"minWeight":6,"price":3.35,"sideLimit":150}},{"air":{"aveDeliveryTime":"9-15 days","fee":20,"maxWeight":35,"minWeight":3,"price":8.10,"sideLimit":130},"name":"Moldova","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"5-9 weeks","fee":20,"maxWeight":45,"minWeight":6,"price":4.00,"sideLimit":145}},{"air":{"aveDeliveryTime":"7-15 days","fee":20,"maxWeight":30,"minWeight":3,"price":7.90,"sideLimit":130},"name":"Netherlands","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":25,"maxWeight":30,"minWeight":6,"price":3.20,"sideLimit":150}},{"air":{"aveDeliveryTime":"14-25 days","fee":40,"maxWeight":20,"minWeight":3,"price":8.10,"sideLimit":130},"name":"Norway","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"5-9 weeks","fee":40,"maxWeight":20,"minWeight":6,"price":4.35,"sideLimit":145}},{"air":{"aveDeliveryTime":"7-15 days","fee":13,"maxWeight":50,"minWeight":1,"price":6.20,"sideLimit":130},"name":"Poland","overwaight":true,"packageDimension":420,"priority":80,"sea":{"aveDeliveryTime":"4-7 weeks","fee":13,"maxWeight":50,"minWeight":1,"price":2.30,"sideLimit":175}},{"air":{"aveDeliveryTime":"8-15 days","fee":30,"maxWeight":30,"minWeight":3,"price":7.90,"sideLimit":130},"name":"Portugal","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":30,"maxWeight":30,"minWeight":6,"price":3.20,"sideLimit":150}},{"air":{"aveDeliveryTime":"7-15 days","fee":10,"maxWeight":99,"minWeight":3,"price":7.60,"sideLimit":130},"name":"Romania","overwaight":true,"packageDimension":540,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":10,"maxWeight":99,"minWeight":6,"price":3.80,"sideLimit":150}},{"air":{"aveDeliveryTime":"14-28 days","fee":20,"maxWeight":19.5,"minWeight":3,"price":9.35,"sideLimit":120},"name":"Russia","overwaight":false,"packageDimension":290,"priority":100,"sea":{"aveDeliveryTime":"6-11 weeks","fee":20,"maxWeight":19.5,"minWeight":4,"price":6.25,"sideLimit":120}},{"air":{"aveDeliveryTime":"7-15 days","fee":18,"maxWeight":30,"minWeight":3,"price":7.80,"sideLimit":130},"name":"Slovakia","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":18,"maxWeight":30,"minWeight":6,"price":2.90,"sideLimit":150}},{"air":{"aveDeliveryTime":"7-15 days","fee":20,"maxWeight":30,"minWeight":3,"price":7.60,"sideLimit":130},"name":"Slovenia","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":20,"maxWeight":30,"minWeight":6,"price":3.10,"sideLimit":150}},{"air":{"aveDeliveryTime":"8-15 days","fee":20,"maxWeight":30,"minWeight":3,"price":7.90,"sideLimit":130},"name":"Spain","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":30,"maxWeight":30,"minWeight":6,"price":3.10,"sideLimit":150}},{"air":{"aveDeliveryTime":"7-15 days","fee":25,"maxWeight":30,"minWeight":3,"price":7.90,"sideLimit":130},"name":"Sweden","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"4-7 weeks","fee":25,"maxWeight":30,"minWeight":6,"price":3.20,"sideLimit":150}},{"air":{"aveDeliveryTime":"14-25 days","fee":25,"maxWeight":20,"minWeight":3,"price":7.90,"sideLimit":130},"name":"Switzerland","overwaight":false,"packageDimension":290,"priority":0,"sea":{"aveDeliveryTime":"5-9 weeks","fee":30,"maxWeight":20,"minWeight":6,"price":3.35,"sideLimit":145}},{"air":{"aveDeliveryTime":"8-14 days","fee":15,"maxWeight":50,"minWeight":1,"price":7.90,"sideLimit":120},"name":"Ukraine","overwaight":true,"packageDimension":290,"priority":90,"sea":{"aveDeliveryTime":"4-7 weeks","fee":15,"maxWeight":50,"minWeight":4,"price":3.90,"sideLimit":120}},{"air":{"aveDeliveryTime":"14-25 days","fee":45,"maxWeight":19,"minWeight":3,"price":6.90,"sideLimit":95},"name":"United Kingdom","overwaight":false,"packageDimension":180,"priority":0,"sea":{"aveDeliveryTime":"5-9 weeks","fee":60,"maxWeight":19,"minWeight":6,"price":3.35,"sideLimit":95}}];
-
-		var countrySelect = document.getElementById('countries');
-		let sortedCountries = countries.sort((a, b) => {
-			if (a.priority < b.priority) {
-				return 1	
-			} else if (a.priority === b.priority) {
-				return 0
-			} else {
-				return -1
-			}
-		});
-		sortedCountries.forEach(option => countrySelect.options.add(new Option(option.name)));
-		countrySelect.onchange = updateCountry;
-
-		document.getElementsByName("shipment-type").forEach(radio => {
-			radio.onclick = handleShipmentTypeChange;
-		});
-
-		let calcInputs = document.getElementsByClassName("calc")
-		Array.from(calcInputs).forEach(input => {
-			input.onchange = calculate;
-		});
-
-		// Press and hold to clear the form
-		var clearTimer;
-		var isClearButtonPressed = false;
-		let clearButton = document.getElementById("clear");
-		clearButton.onmousedown = () => {
-			if (isClearButtonPressed === false) {
-				clearTimer = setTimeout(clear, 1000);
-				isClearButtonPressed = true;
-			}
-		};
-		clearButton.onmouseup = () => {  
-     		if (clearTimer) window.clearTimeout(clearTimer);
-			isClearButtonPressed = false;
-		};
-		// End of clearing the form
-
-		/// FUNCTIONS
-
-		function clear() {
-				countrySelect.selectedIndex = 0;
-				updateCountry();
-				document.getElementById("calc-input-width").value = null;
-				document.getElementById("calc-input-height").value = null;
-				document.getElementById("calc-input-lenght").value = null;
-				document.getElementById("calc-input-weight").value = null;
-				document.getElementById("result").textContent = null;
-				document.getElementById("alert").hidden = true;
-				document.getElementById("danger").hidden = true;
-		};
-
-		function handleShipmentTypeChange(event) {
-			let shipmentType = event.currentTarget.value;
-			let selectedCountry = countrySelect.options[countrySelect.selectedIndex].text;
-			let countryObject = countries.find(country => country.name === selectedCountry);
-			let info = countryObject[shipmentType];
-			fillInfoTable(info);
-			calculate();
-		};
-
-		function updateCountry() { 
-			resetShipmentType();
-			resetInfoTable();
-		};
-
-		function resetShipmentType() {
-			document.getElementsByName("shipment-type")
-			.forEach(option => option.checked = false);
-		};
-
-		function fillInfoTable(info) {
-			document.getElementById("info-price").textContent = info.price;
-      		document.getElementById("info-fee").textContent = info.fee;
-      		document.getElementById("info-min-weight").textContent = info.minWeight;
-      		document.getElementById("info-max-weight").textContent = info.maxWeight;
-      		document.getElementById("info-delivery-time").textContent = info.aveDeliveryTime;
-		};
-
-		function resetInfoTable() {
-			let table = document.getElementById("info");
-			let tbody = table.getElementsByTagName("tbody")[0];
-			let tr = tbody.getElementsByTagName("tr")[0];
-			let tds = tr.getElementsByTagName("td");
-			Array.from(tds).forEach(cell => cell.textContent = "-");
-		};
-
-		function calculate() {
-			let width = Number(document.getElementById("calc-input-width").value);
-			let height = Number(document.getElementById("calc-input-height").value);
-			let lenght = Number(document.getElementById("calc-input-lenght").value);
-			let weight = Number(document.getElementById("calc-input-weight").value);
-			
-			let selectedCountry = countrySelect.options[countrySelect.selectedIndex].text;
-			let countryObject = countries.find(country => country.name === selectedCountry);
-			let shipmentTypes = document.getElementsByName("shipment-type");
-			let shipmentType = Array.from(shipmentTypes).find(type => type.checked)?.value;
-			let info = countryObject[shipmentType];
-			let result = document.getElementById("result");
-			let alert = document.getElementById("alert");
-			alert.hidden = true;
-			let danger = document.getElementById("danger");
-			danger.hidden = true;
-
-			if (info == null) { 
-				alert.hidden = false;
-				alert.textContent = "Выберите старну и тип доставки";
-				return;
-			}
-
-			if (width > 0 && height > 0 && lenght > 0 && weight > 0) { 
-				// continue
-			} else {
-				alert.hidden = false;
-				alert.textContent = "Заполите все поля";
-				return;
-			 };
-
-			 if (weight > info.maxWeight) {
-			 	danger.hidden = false;
-			 	danger.textContent = "Перевес!";
-			 	return;
-			 }
-
-			 if (width > info.sideLimit || height > info.sideLimit || lenght > info.sideLimit) {
-				alert.hidden = false;
-				alert.textContent = `Одна из сторон больше ${info.sideLimit}см`;
-				return;
-			 };
-			 
-			 // Check package dimension
-			 // the longest side + (2 * 2nd side) + (2 * 3rd side)
-			 let sides = [width, height, lenght].sort((a, b) => b - a);
-			 let packageDimension = sides[0] + (2 * sides[1]) + (2 * sides[2]);
-			 if (countryObject.packageDimension && packageDimension > countryObject.packageDimension) {
-				alert.hidden = false;
-				alert.textContent = `Сумма сторон (${packageDimension}см) превышает ${countryObject.packageDimension}см`;
-				return;
-			 };
-
-			 let coefficient = shipmentType === "sea" ? 9000 : 6000;
-			 let size = width * height * lenght;
-			 let sizeValue = size / coefficient;
-
-			 let value = Math.max(sizeValue, info.minWeight, weight);
-			 var priceForWeight = value * info.price;
-			 let overwaightValue = 30;
-			 if (countryObject.overwaight && value > overwaightValue) {
-				priceForWeight += (value - overwaightValue).toFixed(1) * 2; // Round to 0.1
-			 }
-			 let resultValue = info.fee + priceForWeight;
-			 let roundedResultValue = (Math.ceil(resultValue*20)/20).toFixed(2); // Rounded by 5 cents (0.05)
-			 result.textContent = roundedResultValue;
-		}
-	</script>
+	<script src="./countries.js"></script>
+	<script src="./index.js"></script>
 </html>
 
