@@ -14,7 +14,7 @@
 		<div class="container">
 			<div class="row justify-content-between m-3">
 				<div class="col-10">
-					<h3>Kalyna Shipping</h3>
+					<h3>Kalyna Shipping <span class="text-black text-opacity-25">v0.1</span></h3> 
 				</div>
 				<div class="col-2">
 					<button type="button" class="btn text-danger" id="reset">Reset</button>	
@@ -55,34 +55,58 @@
 			</table>
 			<div class="row">
 				<div class="input-group col-md-3 col-xs-12 m-1">
-					<span class="input-group-text">Ширина</span>
-					<input type="number" class="form-control calc" id="calc-input-width" inputmode="decimal">
-					<span class="input-group-text">см</span>
-				</div>
-				<div class="input-group col-md-3 col-xs-12 m-1">
-					<span class="input-group-text">Высота</span>
-					<input type="number" class="form-control calc" id="calc-input-height" inputmode="decimal">
-					<span class="input-group-text">см</span>
-				</div>	
-				<div class="input-group col-md-3 col-xs-12 m-1">
-					<span class="input-group-text">Длина</span>
+					<span class="input-group-text">Lenght</span>
 					<input type="number" class="form-control calc" id="calc-input-lenght" inputmode="decimal">
-					<span class="input-group-text">см</span>
+					<span class="input-group-text">cm</span>
 				</div>
+				<div class="input-group col-md-3 col-xs-12 m-1">
+					<span class="input-group-text">Width</span>
+					<input type="number" class="form-control calc" id="calc-input-width" inputmode="decimal">
+					<span class="input-group-text">cm</span>
+				</div>
+				<div class="input-group col-md-3 col-xs-12 m-1">
+					<span class="input-group-text">Height</span>
+					<input type="number" class="form-control calc" id="calc-input-height" inputmode="decimal">
+					<span class="input-group-text">cm</span>
+				</div>	
 			</div>
 			<div class="row">
 				<div class="input-group m-1">
-					<span class="input-group-text">Вес</span>
+					<span class="input-group-text">Weight</span>
 					<input type="number" class="form-control calc" id="calc-input-weight" inputmode="decimal">
-					<span class="input-group-text">кг</span>
+					<span class="input-group-text">kg</span>
 				 </div>
 			</div>
 			<hr>
 			<div class="alert alert-danger" role="alert" id="danger" hidden></div>
 			<div class="alert alert-warning" role="alert" id="alert" hidden></div>
-			<div class="row m-2 fw-bold fs-2">
+			<div class="row mt-2 mx-2 mb-0">
 				<div class="col">
-					<p>Стоимость: </p>
+					<p>Сhargeable weight:</p>
+				</div>
+				<div class="col">
+					<p class="text-end" id="chargeableWeight"></p>
+				</div>
+			</div>
+			<div class="row mx-2 my-0">
+				<div class="col">
+					<p>Rate:</p>
+				</div>
+				<div class="col">
+					<p class="text-end" id="rate"></p>
+				</div>
+			</div>
+			<div class="row mx-2 my-0">
+				<div class="col">
+					<p>Rate × Weight:</p>
+				</div>
+				<div class="col">
+					<p class="text-end" id="rateWeight"></p>
+				</div>
+			</div>
+			<div class="row mx-2 fw-bold fs-2 my-0">
+				<div class="col">
+					<p>Total: </p>
 				</div>
 				<div class="col">
 					<p class="text-end" id="result"></p>

@@ -4,6 +4,9 @@ const widthInput = document.getElementById("calc-input-width");
 const heightInput = document.getElementById("calc-input-height");
 const lenghtInput = document.getElementById("calc-input-lenght");
 const weightInput = document.getElementById("calc-input-weight");
+const chargeableWeightTag = document.getElementById("chargeableWeight");
+const rateTag = document.getElementById("rate");
+const rateWeightTag = document.getElementById("rateWeight");
 const resultTag = document.getElementById("result");
 const alert = document.getElementById("alert");
 const danger = document.getElementById("danger");
@@ -147,11 +150,16 @@ function calculate() {
   let value = Math.max(sizeValue, info.minWeight, weight);
   var priceForWeight = value * info.price;
   let overwaightValue = 30;
+
+  rateTag.textContent = info.price;
+  chargeableWeightTag.textContent = value.toFixed(2);
   
   // We count overwaight only for real weight
   if (countryObject.overwaight && value > overwaightValue && value > sizeValue) {
     priceForWeight += (value - overwaightValue).toFixed(1) * 2; // Round to 0.1
   }
+  rateWeightTag.textContent = priceForWeight.toFixed(2);
+
   let resultValue = info.fee + priceForWeight;
   let roundedResultValue = (Math.ceil(resultValue * 20) / 20).toFixed(2); // Rounded by 5 cents (0.05)
   resultTag.textContent = roundedResultValue;
